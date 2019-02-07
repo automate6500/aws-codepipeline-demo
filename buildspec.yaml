@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  #install:
+    #commands:
+      # - command
+      # - command
+  #pre_build:
+    #commands:
+      # - command
+      # - command
+  build:
+    commands:
+      - echo hello
+      - which make
+      - ls -ltr
+#cache:
+  #paths:
+    # - paths
