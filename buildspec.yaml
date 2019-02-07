@@ -13,11 +13,11 @@ phases:
     commands:
       - pip install --quiet --upgrade --requirement requirements.txt
       - make lint unittest
-      - ./upload-new-version.sh
-      - ./deploy-new-version.sh staging
-      - ./test-environment.sh staging
-      - ./deploy-new-version.sh production
-      - ./test-environment.sh production
+      - make upload
+      - make deploy ENV=staging
+      - make test ENV=staging
+      - make deploy ENV=production
+      - make test ENV=production
 
 #cache:
   #paths:
